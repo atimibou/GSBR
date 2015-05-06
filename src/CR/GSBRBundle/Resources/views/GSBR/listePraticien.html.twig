@@ -1,0 +1,24 @@
+
+{% extends "CRGSBRBundle::layout.html.twig" %}
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+{% block body %}
+    <h2 class="text-center">Liste des Praticiens</h2><br/>
+    <table class="table table-bordered">
+        <tr>
+            <th width="25%">Nom</th>
+            <th width="25%">Prénom</th>
+            <th width="25%">Ville</th>
+            <th width="25%">Type</th>
+        </tr>
+        {% for unPraticien in lesPraticiens %}
+            <tr>
+                <td>{{unPraticien.getNomMedecin}}</td>
+                <td>{{unPraticien.getPrenomMedecin}}</td>
+                <td>{{unPraticien.getVilleMedecin}}</td>
+                <td>{{unPraticien.getTypeMedecin.getLibelleType}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

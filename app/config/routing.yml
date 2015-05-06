@@ -1,0 +1,10 @@
+crgsbr:
+    resource: "@CRGSBRBundle/Resources/config/routing.yml"
+    prefix:   /GSBR
+crgsbr_connexion:
+    pattern:  /GSBR/connexion
+    defaults: { _controller: CRGSBRBundle:Default:connexion }
+crgsbr_connexion_check:
+    pattern:   /GSBR/connexion_check
+crgsbr_deconnexion:
+    pattern:   /GSBR/deconnexion

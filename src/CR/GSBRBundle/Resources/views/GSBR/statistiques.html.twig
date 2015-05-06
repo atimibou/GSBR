@@ -1,0 +1,19 @@
+{% extends "CRGSBRBundle::layout.html.twig" %}
+
+{% block title %}
+        Statistiques - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <h3 class="text-center">Les statistiques</h3>
+    <hr> 
+    
+    <p>Nombre de médicaments : {{ nbMedic }}</p>
+    <p>Nombre de famille : {{ nbFamille }}</p>
+    <p>Nombre de praticien : {{ nbPraticien }}</p>
+    
+    
+
+    
+{% endblock %}

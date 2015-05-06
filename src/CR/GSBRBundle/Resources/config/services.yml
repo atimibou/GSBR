@@ -1,0 +1,7 @@
+parameters:
+#    crgsbr.example.class: CR\GSBRBundle\Example
+
+services:
+#    crgsbr.example:
+#        class: %crgsbr.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

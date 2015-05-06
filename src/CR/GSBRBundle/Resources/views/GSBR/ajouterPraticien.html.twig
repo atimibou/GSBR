@@ -1,0 +1,11 @@
+{% extends "CRGSBRBundle::layout.html.twig" %}
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+{% block body %}
+
+    <h3 class="text-center">Nouveau Praticien</h3>
+    <hr> 
+
+    {{ form(form)}}
+{% endblock %}

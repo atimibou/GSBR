@@ -1,0 +1,64 @@
+{% extends "CRGSBRBundle::layout.html.twig" %}
+{% block title %}
+    Accueil - {{ parent() }}
+{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <h2 class="text-center">INFORMATIONS PERSONNELLES</h2>
+            <hr>
+            {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+            {{ form_errors(form) }}
+
+            <div class="form-group">
+                {{ form_label(form.nom, "Nom", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.prenom, "Prénom", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.adresse, "Adresse", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.cp, "Code postal", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.cp, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.ville, "Ville", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.dateEmbauche, "Date d'embauche", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.dateEmbauche, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(form.mdp, "Mot de passe", {'label_attr': {'class': 'col-md-3 control-label'}}) }}
+                <div class="col-md-6">
+                    {{ form_widget(form.mdp, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 col-md-offset-3">
+                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

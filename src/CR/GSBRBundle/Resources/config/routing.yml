@@ -1,0 +1,37 @@
+crgsbr_homepage:
+    pattern:  /
+    defaults: { _controller: CRGSBRBundle:Default:accueil }
+crgsbr_profil:
+    pattern:  /profil
+    defaults: { _controller: CRGSBRBundle:Default:profil }
+crgsbr_liste_medicament:
+    pattern:  /listeMedicament
+    defaults: { _controller: CRGSBRBundle:GSBR:listeMedicament }
+crgsbr_recherche_medicament:
+    pattern:  /rechercheMedicament
+    defaults: { _controller: CRGSBRBundle:GSBR:rechercheMedicament }
+crgsbr_liste_praticien:
+    pattern:  /listePraticien
+    defaults: { _controller: CRGSBRBundle:GSBR:listePraticien }
+crgsbr_recherche_praticien:
+    pattern:  /recherchePraticien
+    defaults: { _controller: CRGSBRBundle:GSBR:recherchePraticien }
+crgsbr_consulter_visite:
+    pattern:  /consulterVisite
+    defaults: { _controller: CRGSBRBundle:GSBR:consulterVisite }
+    
+crgsbr_ajouter_visite:
+    pattern:  /ajouterVisite
+    defaults: { _controller: CRGSBRBundle:GSBR:ajouterVisite }
+    
+crgsbr_statistiques:
+    pattern:  /statistiques
+    defaults: { _controller: CRGSBRBundle:GSBR:statistiques }
+
+crgsbr_ajoute_medicament:
+    pattern:  /ajouterMedicament
+    defaults: { _controller: CRGSBRBundle:GSBR:ajouterMedicament }
+    
+crgsbr_ajoute_praticien:
+    pattern:  /ajouterPraticien
+    defaults: { _controller: CRGSBRBundle:GSBR:ajouterPraticien }

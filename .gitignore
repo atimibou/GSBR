@@ -1,0 +1,6 @@
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+vendor/*
+vendor
+*.cache.php

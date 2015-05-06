@@ -1,0 +1,28 @@
+security:
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        connexion_firewall:
+            pattern:    ^/GSBR/connexion$
+            anonymous:  ~
+        secured_area:
+            pattern:    ^/GSBR/
+            form_login:
+                login_path:  /GSBR/connexion
+                check_path:  /GSBR/connexion_check
+            logout:
+                path:   /GSBR/deconnexion
+                target: /GSBR/
+
+    access_control:
+        - { path: ^/GSBR/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/GSBR/, roles: ROLE_ADMIN }
+    providers:
+        main:
+            entity: { class: CR\GSBRBundle\Entity\Visiteur, property: login }
+
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        CR\GSBRBundle\Entity\Visiteur: plaintext
